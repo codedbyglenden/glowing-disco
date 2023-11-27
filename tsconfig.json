@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "skipLibCheck": true,
+	"esModuleInterop": true,
+	"declaration": true,
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution":"node",
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+	"baseUrl": "./assets/src/",
+	"paths": {
+	  "@classes/*": ["ts/classes/*"],
+	  "@helpers/*": ["ts/helpers/*"],
+	  "@extensions/*": ["tsx/extensions/*"],
+	  "@patterns/*": ["tsx/patterns/*"],
+	  "@blocks/*": ["tsx/blocks/*"],
+	}
+  },
+  "typeAcquisition": {
+	"include": [
+		"jest"
+	]
+  },
+  "include": [
+    "assets/src/tsx/**/*.ts",
+    "assets/src/tsx/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
