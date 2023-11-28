@@ -20,58 +20,97 @@
 		</header>
 	</article>
 
-	<div>
-		<h2 id="sidebar-heading">Sidebar heading</h2>
+	<aside class="aside">
+		<h2 class="aside-heading" id="sidebar-heading">Sidebar heading</h2>
 		<div class="mcb-hero-block-list" role="group" aria-labelledby="sidebar-heading">
 
-			<!-- Require a list in a loop. -->
-
-			<article class="homepage-featured-content-news-item post-88109">
+			<!-- Require a list in a loop -->
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
 				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<h3 class="homepage-featured-content-news-item__title">
-					<a href="#link-here">
-						The title of the post here.
-					</a>
-				</h3>
-			</article>
-
-			<article class="homepage-featured-content-news-item post-88109">
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<h3 class="homepage-featured-content-news-item__title">
-					<a href="#link-here">
-						The title of the post here.
-					</a>
-				</h3>
-			</article>
-
-			<article class="homepage-featured-content-news-item post-88109">
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<h3 class="homepage-featured-content-news-item__title">
-					<a href="#link-here">
-						The title of the post here.
-					</a>
-				</h3>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
 			</article>
 
 
-			<article class="homepage-featured-content-news-item post-88109">
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
 				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<h3 class="homepage-featured-content-news-item__title">
-					<a href="#link-here">
-						The title of the post here.
-					</a>
-				</h3>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
 			</article>
 
-			<article class="homepage-featured-content-news-item post-88109">
+
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
 				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<h3 class="homepage-featured-content-news-item__title">
-					<a href="#link-here">
-						The title of the post here.
-					</a>
-				</h3>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
 			</article>
 
+
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
+				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
+			</article>
+
+
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
+				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
+			</article>
+
+
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
+				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
+			</article>
+
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
+				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
+			</article>
+
+			<article class="faux-link--element">
+				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
+				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
+				<div class="title-container">
+					<h3 class="title">
+						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
+					</h3>
+				</div>
+			</article>
 		</div>
-	</div>
+
+		<a class="view-all" href="#view-all">View all</a>
+	</aside>
 </section>
