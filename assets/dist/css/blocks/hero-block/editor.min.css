@@ -3,7 +3,7 @@
 .mcb-articles .mcb-article{display:flex;padding:16px}.mcb-articles .mcb-article:not(:last-child){border-bottom:1px solid var(--wp--preset--color--cyan-bluish-gray)}
 .mcb-articles .mcb-article .heading{font-size:16px;margin:0}.mcb-articles .mcb-article time{font-size:10px;text-transform:uppercase;color:var(--wp--preset--color--cyan-bluish-gray)}
 .mcb-articles-footer{margin-top:16px}.mcb-main-stage{display:flex}.mcb-main-stage .mcb-stage-override{position:absolute}
-.mcb-main-stage .mcb-stage-remove{left:42px;background-color:var(--wp--preset--color--vivid-red);color:#fff}
+.mcb-main-stage .mcb-stage-remove{left:44px;background-color:var(--wp--preset--color--vivid-red);color:#fff}
 .mcb-main-stage .stage{max-width:70%;width:100%}.mcb-main-stage .stage .feature-image{min-height:500px;width:100%;background-color:var(--wp--preset--color--cyan-bluish-gray)}
 .mcb-main-stage .stage .feature-image img{width:100%;height:500px;object-fit:cover;display:block}
 .mcb-main-stage .stage .headline{padding:16px 40px}.mcb-main-stage .stage .headline .heading{font-size:32px;line-height:1.2;margin:0}
