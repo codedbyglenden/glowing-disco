@@ -19,12 +19,42 @@ if ( ! defined( 'WPINC' ) ) {
 class WhiteHouse_Hero_Block {
 
 	/**
+	 * The hero block service.
+	 *
+	 * @var Hero_Block_Service
+	 */
+	protected Hero_Block_Service $service;
+
+	/**
 	 * Add Hooks.
 	 */
 	public function __construct() {
-		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 20, 2 );
 
+		$this->service = new Hero_Block_Service();
+
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 20, 2 );
 		add_action( 'rest_api_init', array( $this, 'rest_endpoint' ) );
+		add_filter( 'render_block', array( $this->service, 'render_block' ), 10, 2 );
+
+		add_action( 'after_setup_theme', array( $this, 'enqueue_frontend_assets' ) );
+	}
+
+	/**
+	 * Enqueue
+	 */
+	public function enqueue_frontend_assets() {
+
+		// Get the theme version.
+		// $plugin_version = mcb_get_plugin_data();
+
+		\wp_enqueue_block_style(
+			'mcb/hero',
+			array(
+				'handle' => 'mcb-hero-front-end-css',
+				'src'    => MCB_BLOCKS_PLUGIN_URL . 'assets/dist/css/blocks/hero-block/front-end.min.css',
+				'ver'    => '1.0.0',
+			)
+		);
 	}
 
 	/**
@@ -40,7 +70,7 @@ class WhiteHouse_Hero_Block {
 			'mcb/hero',
 			array(
 				'handle' => 'mcb-hero-css',
-				'src'    => MCB_BLOCKS_PLUGIN_DIR . 'assets/dist/css/blocks/hero-block/editor.min.css',
+				'src'    => MCB_BLOCKS_PLUGIN_URL . 'assets/dist/css/blocks/hero-block/editor.min.css',
 				'ver'    => $plugin_version,
 			)
 		);
@@ -48,7 +78,7 @@ class WhiteHouse_Hero_Block {
 		// JSX Enqueue
 		\wp_enqueue_script(
 			'mcb-gutenberg-js',
-			MCB_BLOCKS_PLUGIN_DIR . 'assets/dist/jsx/hero-block.min.js',
+			MCB_BLOCKS_PLUGIN_URL . 'assets/dist/jsx/hero-block.min.js',
 			array(
 				'wp-blocks',
 				'wp-i18n',
@@ -83,7 +113,7 @@ class WhiteHouse_Hero_Block {
 			'/search',
 			array(
 				'methods'             => 'GET',
-				'callback'            => array( new Hero_Block_Service(), 'search_endpoint' ),
+				'callback'            => array( $this->service, 'search_endpoint' ),
 				'permission_callback' => '__return_true',
 			)
 		);

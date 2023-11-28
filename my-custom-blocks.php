@@ -21,7 +21,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'MCB_BLOCKS_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
+define( 'MCB_BLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'MCB_BLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 /**
  * Require the main helper class.
@@ -39,7 +40,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 function mcb_get_plugin_data( string $name = 'Version' ): string {
 
-	$data = get_plugin_data( __DIR__, false, false );
+	$data = get_plugin_data( MCB_BLOCKS_PLUGIN_DIR, false, false );
 
 	return $data[ $name ] ?? '';
 }

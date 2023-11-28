@@ -17,6 +17,24 @@ if ( ! defined( 'WPINC' ) ) {
 class Hero_Block {
 
 	/**
+	 * Render the block on the front-end.
+	 */
+	public function render_block( $block_content, $block ): mixed {
+
+		if ( 'mcb/hero' !== $block['blockName'] ) {
+			return $block_content;
+		}
+
+		$attributes = $block['attrs'];
+
+		ob_start();
+
+		require_once MCB_BLOCKS_PLUGIN_DIR . 'app/markup/blocks/hero-block.php';
+
+		return ob_get_clean();
+	}
+
+	/**
 	 * Search endpoint.
 	 */
 	public function search_endpoint( $request ): array {
