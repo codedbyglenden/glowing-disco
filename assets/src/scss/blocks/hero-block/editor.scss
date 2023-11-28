@@ -48,6 +48,16 @@
 .mcb-main-stage {
 	display: flex;
 
+	.mcb-stage-override {
+		position: absolute;
+	}
+
+	.mcb-stage-remove {
+		left: 42px;
+		background-color: var(--wp--preset--color--vivid-red);
+		color: #fff;
+	}
+
 	.stage {
 		max-width: 70%;
 		width: 100%;

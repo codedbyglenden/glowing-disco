@@ -73,7 +73,8 @@ registerBlockType( 'mcb/hero', {
 				url: '',
 				text: 'View all',
 			}
-		}
+		},
+		
     },
     edit: ( {attributes, setAttributes} ) => {
         const [searchQuery, setSearchQuery] = useState('');
