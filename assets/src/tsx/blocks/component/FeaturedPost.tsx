@@ -2,7 +2,7 @@
 const { MediaUpload, MediaUploadCheck } = wp.blockEditor;
 const { Button } = wp.components;
 
-const FeaturedPost = ({image = '', title, attributes, setAttributes}) => {
+const FeaturedPost = ({image, title, attributes, setAttributes}) => {
 
 	const removeMedia = () => {
 		setAttributes({
@@ -18,11 +18,13 @@ const FeaturedPost = ({image = '', title, attributes, setAttributes}) => {
 		});
 	}
 
+	console.log( image );
+
 	return(
 		<>
 		<article className="stage">
 				<div className="feature-image">
-					<img src={attributes.mediaId ? attributes.mediaUrl : image}/>
+					<img src={image}/>
 				</div>
 				<div className="headline">
 					<h2 className="heading">{title}</h2>

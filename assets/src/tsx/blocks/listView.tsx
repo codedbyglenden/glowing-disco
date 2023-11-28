@@ -27,7 +27,7 @@ const ListView = ({
 						<article className="mcb-article" key={index}>
 							{ ( featuredImage && article.thumbnail ) &&
 								<div className="mcb-article-image">
-									<img src={article.thumbnail}/>
+									<img src={article.thumbnail ?? undefined}/>
 								</div>
 							}
 							<div className="mcb-article-content">

@@ -74,7 +74,7 @@ registerBlockType( 'mcb/hero', {
 				text: 'View all',
 			}
 		},
-		
+
     },
     edit: ( {attributes, setAttributes} ) => {
         const [searchQuery, setSearchQuery] = useState('');
@@ -110,13 +110,20 @@ registerBlockType( 'mcb/hero', {
 		const savePosts = (post) => {
             const newSearch = foundPosts.filter(obj => obj.id !== post.id);
 
-            const posts = [...savedPosts, post];
-            setAttributes({savedPosts: posts})
+			if ( ! savedPosts.find( (obj) => obj.id === post.id ) ) {
+				setAttributes({savedPosts: [...savedPosts, post] })
+			}
+
             setFoundPosts(newSearch)
+
+			setSearchQuery('');
         }
 
         const removePosts = (post) => {
             const posts = savedPosts.filter(obj => obj.id !== post.id);
+
+			console.log( 'saved: ', savedPosts );
+			console.log( 'posts: ', posts );
 
             setAttributes({savedPosts: posts})
         }

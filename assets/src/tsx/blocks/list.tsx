@@ -8,7 +8,7 @@ const List = ({articles, featuredImage}) => {
 					<article className="mcb-article" key={index}>
 						{ ( featuredImage && article.thumbnail ) &&
 							<div className="hp-selector-image">
-								<img src={article.thumbnail}/>
+								<img src={article.thumbnail ?? undefined}/>
 							</div>
 						}
 						<div className="hp-selector-content">

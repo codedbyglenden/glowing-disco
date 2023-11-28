@@ -12,7 +12,7 @@ const MainStage = ({articles, featuredImage, attributes, setAttributes}) => {
 
 			<FeaturedPost
 				title={article.title}
-				image={article.thumbnail}
+				image={attributes.mediaUrl ? attributes.mediaUrl : article.thumbnail !== false ? article.thumbnail : undefined}
 				attributes={attributes}
 				setAttributes={setAttributes}
 			/>
