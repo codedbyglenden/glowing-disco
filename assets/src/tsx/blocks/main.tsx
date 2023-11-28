@@ -1,7 +1,7 @@
 import ListView from "./listView";
 import FeaturedPost from "./component/FeaturedPost";
 
-const MainStage = ({articles, featuredImage, attributes, setAttributes}) => {
+const MainStage = ({articles, attributes, setAttributes}) => {
 
 	// Split the article pos
 	const article     = articles[0];

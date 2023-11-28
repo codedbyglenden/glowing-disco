@@ -74,7 +74,14 @@ registerBlockType( 'mcb/hero', {
 				text: 'View all',
 			}
 		},
-
+		mediaUrl: {
+			type: 'string',
+			default: '',
+		},
+		mediaId: {
+			type: 'int',
+			default: '',
+		}
     },
     edit: ( {attributes, setAttributes} ) => {
         const [searchQuery, setSearchQuery] = useState('');
