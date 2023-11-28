@@ -13,7 +13,7 @@
  * Text Domain:       mcb
  * Domain Path:       /languages
  *
- * @package barista
+ * @package mcb
  */
 
 // If this file is called directly, abort.

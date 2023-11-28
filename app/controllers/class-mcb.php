@@ -2,7 +2,7 @@
 /**
  * Class to generate posts from JSON.
  *
- * @package barista
+ * @package mcb
  */
 
 namespace mcb\controllers;

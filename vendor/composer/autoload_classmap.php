@@ -9,4 +9,5 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'mcb\\controllers\\MCB' => $baseDir . '/app/controllers/class-mcb.php',
     'mcb\\controllers\\blocks\\WhiteHouse_Hero_Block' => $baseDir . '/app/controllers/blocks/class-hero-block.php',
+    'mcb\\services\\blocks\\Hero_Block' => $baseDir . '/app/services/blocks/class-hero-block.php',
 );

@@ -2,10 +2,12 @@
 /**
  * Class to generate posts from JSON.
  *
- * @package barista
+ * @package mcb
  */
 
 namespace mcb\controllers\blocks;
+
+use mcb\services\blocks\Hero_Block as Hero_Block_Service;
 
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -21,6 +23,8 @@ class WhiteHouse_Hero_Block {
 	 */
 	public function __construct() {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 20, 2 );
+
+		add_action( 'rest_api_init', array( $this, 'rest_endpoint' ) );
 	}
 
 	/**
@@ -33,16 +37,18 @@ class WhiteHouse_Hero_Block {
 
 		// Style Enqueue
 		\wp_enqueue_block_style(
-			'mcb-blocks-css',
-			MCB_BLOCKS_PLUGIN_DIR . '/assets/dist/css/blocks/editor/cta-block.min.css',
-			array(),
-			$plugin_version
+			'mcb/hero',
+			array(
+				'handle' => 'mcb-hero-css',
+				'src'    => MCB_BLOCKS_PLUGIN_DIR . 'assets/dist/css/blocks/hero-block/editor.min.css',
+				'ver'    => $plugin_version,
+			)
 		);
 
 		// JSX Enqueue
 		\wp_enqueue_script(
 			'mcb-gutenberg-js',
-			MCB_BLOCKS_PLUGIN_DIR . '/assets/dist/jsx/cta-block.min.js',
+			MCB_BLOCKS_PLUGIN_DIR . 'assets/dist/jsx/hero-block.min.js',
 			array(
 				'wp-blocks',
 				'wp-i18n',
@@ -62,6 +68,23 @@ class WhiteHouse_Hero_Block {
 			array(
 				'url'        => get_site_url(),
 				'post_types' => mcb_searchable_post_types(),
+			)
+		);
+	}
+
+	/**
+	 * Rest endpoint
+	 *
+	 * @return void
+	 */
+	public function rest_endpoint() {
+		register_rest_route(
+			'mcb/query',
+			'/search',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( new Hero_Block_Service(), 'search_endpoint' ),
+				'permission_callback' => '__return_true',
 			)
 		);
 	}

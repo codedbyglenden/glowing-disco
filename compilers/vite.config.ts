@@ -24,7 +24,7 @@ export default defineConfig({
 	},
 	esbuild: {
 		legalComments: 'none',
-		minifyIdentifiers: true,
+		minifyIdentifiers: false,
 		minifySyntax: true,
 		minifyWhitespace: true,
 	},

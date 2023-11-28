@@ -10,6 +10,7 @@ class ComposerStaticInit95a23dfefb8a51fc51cbb85fee07e6f0
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'mcb\\controllers\\MCB' => __DIR__ . '/../..' . '/app/controllers/class-mcb.php',
         'mcb\\controllers\\blocks\\WhiteHouse_Hero_Block' => __DIR__ . '/../..' . '/app/controllers/blocks/class-hero-block.php',
+        'mcb\\services\\blocks\\Hero_Block' => __DIR__ . '/../..' . '/app/services/blocks/class-hero-block.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
