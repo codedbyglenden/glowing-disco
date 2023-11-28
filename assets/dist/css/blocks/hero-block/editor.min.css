@@ -10,3 +10,4 @@
 .mcb-main-stage .view-all{font-size:12px;margin-top:16px;padding-inline:16px}.mcb-main-stage .articles-header{font-size:16px;text-transform:uppercase}
 .mcb-link-with-text{display:flex;align-items:center}.mcb-link-with-text input{border:none !important}
 .mcb-link-with-text .components-base-control__field{margin-bottom:0 !important}.mcb-link-with-text button{margin-right:8px}
+.is-uppercase input{text-transform:uppercase !important}

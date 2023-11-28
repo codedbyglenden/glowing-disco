@@ -12,7 +12,7 @@ const {
 
 const { TextControl } = wp.components;
 
-const LinkWithText = ({url = '', text = '', placeholder, linkAttributeName, setAttributes}) => {
+const LinkWithText = ({url = '', text = '', placeholder, customClass = '', linkAttributeName, setAttributes}) => {
 
 	const setUrl = (value) => {
 
@@ -42,6 +42,7 @@ const LinkWithText = ({url = '', text = '', placeholder, linkAttributeName, setA
 				placeholder={placeholder}
 				value={text}
 				onChange={setText}
+				className={customClass}
 			/>
 
 			{ ( ! url || url.length < 1 ) && text && text.length > 1 &&

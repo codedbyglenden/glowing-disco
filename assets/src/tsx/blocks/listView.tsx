@@ -17,6 +17,7 @@ const ListView = ({
 					text={attributes.listHeadingLink.text ?? ''}
 					linkAttributeName="listHeadingLink"
 					setAttributes={setAttributes}
+					customClass="is-uppercase"
 				/>
 			</header>
 
