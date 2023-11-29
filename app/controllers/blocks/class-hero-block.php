@@ -37,13 +37,21 @@ class WhiteHouse_Hero_Block {
 		add_filter( 'render_block', array( $this->service, 'render_block' ), 10, 2 );
 
 		add_action( 'after_setup_theme', array( $this, 'enqueue_frontend_assets' ) );
+
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts' ) );
+	}
+
+	/**
+	 * Add fonts.
+	 */
+	public function enqueue_fonts(): void {
+		\wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@500&display=swap', false );
 	}
 
 	/**
 	 * Enqueue
 	 */
 	public function enqueue_frontend_assets() {
-
 		// Get the theme version.
 		// $plugin_version = mcb_get_plugin_data();
 

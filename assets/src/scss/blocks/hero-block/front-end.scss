@@ -1,8 +1,10 @@
+@import "../base/all";
+
 .mcb-hero-block {
 	display: flex;
 
 	.featured {
-		max-width: calc(100% - 360px);
+		max-width: calc(100% - 320px);
 		position: relative;
 
 		.stickyImage {
@@ -16,10 +18,11 @@
 			width: 100%;
 			height: 630px;
 			position: absolute;
+			max-height: calc( 100% - 4px );
 		}
 
 		header {
-			top: 500px;
+			top: 600px; // 500px;
 			position: sticky;
 			background-color: var(--wp--preset--color--white);
 
@@ -27,7 +30,7 @@
 				margin: 0;
 				font-size: 48px;
 				line-height: 1.2;
-				padding: 40px calc( ( 100vw - 1200px ) / 2 );
+				padding: 16px calc( ( 100vw - 1200px ) / 2 );
 
 				@media ( max-width: 1200px ) {
 					padding-inline: 16px;
@@ -37,16 +40,17 @@
 	}
 
 	.aside {
-		padding: 16px;
+		padding: 16px 40px;
 	}
 
 	.aside-heading {
 		font-size: 14px;
 		margin-bottom: 16px;
+		letter-spacing: 1px;
 	}
 
 	&-list {
-		min-width: 360px;
+		min-width: 320px;
 		list-style: none;
 		display: flex;
 		flex-direction: column;
@@ -74,8 +78,6 @@
 			.title {
 				font-size: 16px;
 				margin: 0;
-				// border-bottom: 2px solid rgba(255, 255, 255, 0);
-				// transition: 0.2s ease-in-out text-decoration;
 				padding-bottom: 2px;
 				text-decoration: none;
 				transition: .2s ease;
@@ -90,6 +92,23 @@
 		}
 	}
 }
+
+.link {
+	font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #000 !important;
+	border-bottom: 1px solid rgba(255,255,255,0);
+	transition: 0.2s ease-in-out border-bottom-color;
+	padding-bottom: 2px;
+
+	&:hover,
+	&:focus-visible {
+		border-bottom-color: rgba(156,25,25,.8);
+	}
+}
+
 
 .faux-link {
 	visibility: visible;

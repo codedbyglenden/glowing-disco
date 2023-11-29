@@ -21,7 +21,9 @@
 	</article>
 
 	<aside class="aside">
-		<h2 class="aside-heading" id="sidebar-heading">Sidebar heading</h2>
+		<h2 class="aside-heading is-roboto is-uppercase" id="sidebar-heading">
+			<a href="#link" class="link">Sidebar heading</a>
+		</h2>
 		<div class="mcb-hero-block-list" role="group" aria-labelledby="sidebar-heading">
 
 			<!-- Require a list in a loop -->
@@ -111,6 +113,6 @@
 			</article>
 		</div>
 
-		<a class="view-all" href="#view-all">View all</a>
+		<a class="view-all link" href="#view-all">View all</a>
 	</aside>
 </section>

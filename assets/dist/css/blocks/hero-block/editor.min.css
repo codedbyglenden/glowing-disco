@@ -1,4 +1,6 @@
-.mcb-hero-block .no-posts{background-color:var(--wp--preset--color--cyan-bluish-gray);color:var(--wp--preset--color--black);text-align:center;padding:40px 16px}
+h1,h2,h3,h4,h5,.heading{font-family:"Playfair Display",serif;font-weight:700 !important}
+.is-playfair{font-family:"Playfair Display",serif}.is-roboto{font-family:"Roboto",sans-serif}
+.is-uppercase{text-transform:uppercase}.mcb-hero-block .no-posts{background-color:var(--wp--preset--color--cyan-bluish-gray);color:var(--wp--preset--color--black);text-align:center;padding:40px 16px}
 .mcb-hero-block .no-posts .heading{font-size:18px;line-height:1.2;margin:0}.mcb-articles{display:flex;flex-direction:column;width:calc(30% - 32px);padding:0 16px}
 .mcb-articles .mcb-article{display:flex;padding:16px}.mcb-articles .mcb-article:not(:last-child){border-bottom:1px solid var(--wp--preset--color--cyan-bluish-gray)}
 .mcb-articles .mcb-article .heading{font-size:16px;margin:0}.mcb-articles .mcb-article time{font-size:10px;text-transform:uppercase;color:var(--wp--preset--color--cyan-bluish-gray)}
