@@ -1,0 +1,28 @@
+@keyframes curtainPull {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes imageZoom {
+	0% {
+		transform: scale(1.15);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes articleListSide {
+	0% {
+		opacity: 0;
+		transform: translateX(-16px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

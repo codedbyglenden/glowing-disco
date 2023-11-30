@@ -1,4 +1,5 @@
 @import "../base/all";
+@import "../animations/all";
 
 .mcb-hero-block {
 	display: flex;
@@ -12,6 +13,16 @@
 			top: 0;
 			height: 600px;
 			overflow: hidden;
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: 10;
+				background-color: var(--wp--preset--color--tertiary);
+				animation: 1s forwards curtainPull ease;
+				will-change: transform;
+			}
 		}
 
 		img {
@@ -19,6 +30,7 @@
 			height: 630px;
 			position: absolute;
 			max-height: calc( 100% - 4px );
+			animation: 1s forwards imageZoom ease;
 		}
 
 		header {
@@ -47,6 +59,8 @@
 		font-size: 14px;
 		margin-bottom: 16px;
 		letter-spacing: 1px;
+		opacity: 0;
+		animation: 0.8s 0.8s forwards articleListSide ease;
 	}
 
 	&-list {
@@ -58,6 +72,14 @@
 		article {
 			padding-bottom: 16px;
 			margin-bottom: 16px;
+			opacity: 0;
+			animation: 0.8s 1s forwards articleListSide ease;
+
+			@for $i from 1 through 10 {
+				&:nth-child(#{$i}) {
+					animation-delay: 0.86 + (0.06s * $i);
+				}
+			}
 
 			a:focus-visible,
 			a:hover {
