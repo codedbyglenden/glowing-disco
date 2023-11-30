@@ -12,26 +12,37 @@ const {
 
 const { TextControl } = wp.components;
 
-const LinkWithText = ({url = '', text = '', placeholder, customClass = '', linkAttributeName, setAttributes}) => {
+const LinkWithText = ({
+	url = '',
+	text = '',
+	placeholder,
+	customClass = '',
+	linkAttributeName,
+	setAttributes
+}) => {
 
+	/**
+	 * Set the url for the link object.
+	 */
 	const setUrl = (value) => {
-
-		const obj = {
-			url: value,
-			text: text
-		};
-
-		setAttributes( { [linkAttributeName]: obj } );
+		setAttributes({
+			[linkAttributeName] : {
+				url: value,
+				text: text
+			}
+		});
 	};
 
+	/**
+	 * Set the text for the link object.
+	 */
 	const setText = (value) => {
-
-		const obj = {
-			url: url,
-			text: value
-		};
-
-		setAttributes( { [linkAttributeName]: obj } );
+		setAttributes({
+			[linkAttributeName] : {
+				url: url,
+				text: value
+			}
+		});
 	};
 
 	return(

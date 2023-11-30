@@ -14,7 +14,11 @@ const {
     Button,
 } = wp.components;
 
-function URLPopover({ url, setUrl }) {
+function URLPopover({
+	url,
+	setUrl
+}) {
+
     const [isPopoverVisible, setPopoverVisibility] = useState(false);
 
     return (
