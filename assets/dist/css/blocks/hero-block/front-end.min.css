@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,.heading{font-family:"Playfair Display",serif;font-weight:700 !im
 .mcb-hero-block-list article{padding-bottom:16px;margin-bottom:16px}.mcb-hero-block-list article a:focus-visible~.title-container .title,.mcb-hero-block-list article a:hover~.title-container .title{border-bottom-color:rgba(156,25,25,.8)}
 .mcb-hero-block-list article time{font-size:12px}.mcb-hero-block-list article .title-container{display:block}
 .mcb-hero-block-list article .title{font-size:16px;margin:0;padding-bottom:2px;text-decoration:none;transition:.2s ease;display:inline;border-bottom:1px solid rgba(0,0,0,0)}
-.mcb-hero-block-list article:not(:last-child){border-bottom:1px solid var(--wp--preset--color--cyan-bluish-gray)}
+.mcb-hero-block-list article:not(:last-child){border-bottom:1px solid var(--wp--preset--color--tertiary)}
 .link{font-size:12px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;color:#000 !important;border-bottom:1px solid rgba(255,255,255,0);transition:.2s ease-in-out border-bottom-color;padding-bottom:2px}
 .link:hover,.link:focus-visible{border-bottom-color:rgba(156,25,25,.8)}.faux-link{visibility:visible;white-space:nowrap;position:absolute;text-indent:200%;overflow:hidden;display:block;opacity:0;z-index:2;inset:0}
 .faux-link--element{position:relative}.faux-link--element a:not(.faux-link){position:relative;z-index:3}

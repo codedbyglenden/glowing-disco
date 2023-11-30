@@ -1,8 +1,7 @@
-import LinkWithText from "./component/LinkWithText";
+import LinkWithText from "@components/LinkWithText";
 
 const ListView = ({
 	articles,
-	featuredImage,
 	attributes,
 	setAttributes
 }) => {
@@ -25,11 +24,6 @@ const ListView = ({
 				{
 					Object.values(articles).map((article, index) => (
 						<article className="mcb-article" key={index}>
-							{ ( featuredImage && article.thumbnail ) &&
-								<div className="mcb-article-image">
-									<img src={article.thumbnail ?? undefined}/>
-								</div>
-							}
 							<div className="mcb-article-content">
 								<time dateTime={article.date}>{article.date}</time>
 								<h3 className="heading">{article.title}</h3>

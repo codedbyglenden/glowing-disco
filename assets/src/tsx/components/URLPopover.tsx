@@ -1,7 +1,3 @@
-import { useState } from '@wordpress/element';
-// import { URLInput, BlockControls } from '@wordpress/block-editor';
-// import { Popover, Button } from '@wordpress/components';
-
 const {
     element: {
         useState,

@@ -15,20 +15,10 @@
     ],
 	"baseUrl": "./assets/src/",
 	"paths": {
-	  "@classes/*": ["ts/classes/*"],
-	  "@helpers/*": ["ts/helpers/*"],
-	  "@extensions/*": ["tsx/extensions/*"],
-	  "@patterns/*": ["tsx/patterns/*"],
-	  "@blocks/*": ["tsx/blocks/*"],
+	  "@components/*": ["tsx/components/*"],
 	}
   },
-  "typeAcquisition": {
-	"include": [
-		"jest"
-	]
-  },
   "include": [
-    "assets/src/tsx/**/*.ts",
     "assets/src/tsx/**/*.tsx"
   ],
   "exclude": [

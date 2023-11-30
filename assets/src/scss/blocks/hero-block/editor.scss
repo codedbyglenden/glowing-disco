@@ -3,10 +3,11 @@
 .mcb-hero-block {
 
 	.no-posts {
-		background-color: var(--wp--preset--color--cyan-bluish-gray);
+		background-color: var(--wp--preset--color--tertiary);
 		color: var(--wp--preset--color--black);
 		text-align: center;
 		padding: 40px 16px;
+		width: 100%;
 
 		.heading {
 			font-size: 18px;
@@ -21,13 +22,20 @@
     flex-direction: column;
     width: calc( 30% - 32px );
     padding: 0 16px;
+	min-height: 400px;
+	justify-content: space-between;
+    height: 550px;
+
+	.mcb-articles-loop {
+		height: 100%;
+	}
 
 	.mcb-article {
 		display: flex;
 		padding: 16px;
 
 		&:not(:last-child) {
-			border-bottom: 1px solid var(--wp--preset--color--cyan-bluish-gray);
+			border-bottom: 1px solid var(--wp--preset--color--tertiary);
 		}
 
 		.heading {
@@ -38,7 +46,7 @@
 		time {
 			font-size: 10px;
 			text-transform: uppercase;
-			color: var(--wp--preset--color--cyan-bluish-gray);
+			color: var(--wp--preset--color--tertiary);
 		}
 	}
 
@@ -49,6 +57,7 @@
 
 .mcb-main-stage {
 	display: flex;
+	width: 100%;
 
 	.mcb-stage-override {
 		position: absolute;
@@ -67,7 +76,7 @@
 		.feature-image {
 			min-height: 500px;
 			width: 100%;
-			background-color: var(--wp--preset--color--cyan-bluish-gray);
+			background-color: var(--wp--preset--color--tertiary);
 
 			img {
 				width: 100%;

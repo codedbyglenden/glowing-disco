@@ -11,7 +11,7 @@ export default defineConfig({
 		target: 'esnext',
 		rollupOptions: {
 			input: {
-				'hero-block': path.resolve(__dirname, '../assets/src/tsx/blocks/hero-block.tsx'),
+				'hero-block': path.resolve(__dirname, '../assets/src/tsx/blocks/hero-block/index.tsx'),
 			},
 			output: [
 				{

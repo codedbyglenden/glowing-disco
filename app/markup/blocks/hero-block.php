@@ -5,6 +5,10 @@
  * @package mcb
  */
 
+// sb_dd( $attributes );
+
+$override_image = $attributes['mediaId'] > 0 ? '' : '';
+
 ?>
 
 <section class="mcb-hero-block alignfull">

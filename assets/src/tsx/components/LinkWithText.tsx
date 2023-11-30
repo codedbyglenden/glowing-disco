@@ -1,4 +1,4 @@
-import URLPopover from './urlPopover';
+import URLPopover from "@components/URLPopover";
 
 const {
 	Tooltip

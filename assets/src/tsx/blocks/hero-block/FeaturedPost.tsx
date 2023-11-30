@@ -18,8 +18,6 @@ const FeaturedPost = ({image, title, attributes, setAttributes}) => {
 		});
 	}
 
-	console.log( image );
-
 	return(
 		<>
 		<article className="stage">

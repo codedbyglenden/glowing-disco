@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@components/*": ["components/*"],
+        "@context/*": ["context/*"],
+        "@fonts/*": ["fonts/*"],
+        "@actions/*": ["store/actions/*"],
+        "@layouts/*": ["layouts/*"],
+        "@hooks/*": ["hooks/*"],
+        "@lib/*": ["lib/*"],
+        "@store/*": ["store/*"],
+        "@styles/*": ["styles/*"],
+      }
+    },
+    "typeAcquisition": {
+      "include": [
+          "jest"
+      ]
+    }
+  }
