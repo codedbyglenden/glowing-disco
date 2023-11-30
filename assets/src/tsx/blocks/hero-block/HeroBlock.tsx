@@ -16,7 +16,7 @@ const HeroBlock = ({articles, attributes, setAttributes}) => {
 	const articleList = articles.slice(1);
 
 	return (
-		<div className="mcb-main-stage">
+		<div className="mcb-hero-block">
 
 			<FeaturedPost
 				title={article.title}

@@ -253,9 +253,7 @@ registerBlockType( 'mcb/hero', {
 					</PanelBody>
 				</InspectorControls>
 
-				<div className="mcb-hero-block">
-					<HeroBlock articles={savedPosts} attributes={attributes} setAttributes={setAttributes} />;
-				</div>
+				<HeroBlock articles={savedPosts} attributes={attributes} setAttributes={setAttributes} />;
 			</>
 		)
 	},
