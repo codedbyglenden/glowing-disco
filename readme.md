@@ -14,3 +14,4 @@ All blocks are added to the `CodedByGlenden Blocks` category.
 
 See the video below of me adding and using the block.
 
+[![Hero Block Demo](thumbnail-url)](video-url)
