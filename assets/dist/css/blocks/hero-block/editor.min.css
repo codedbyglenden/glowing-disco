@@ -6,8 +6,8 @@ h1,h2,h3,h4,h5,.heading{font-family:"Playfair Display",serif;font-weight:700 !im
 .mcb-hero-block .stage .feature-image img{width:100%;height:500px;object-fit:cover;display:block}
 .mcb-hero-block .stage .headline{padding:16px 40px}.mcb-hero-block .stage .headline .heading{font-size:32px;line-height:1.2;margin:0}
 .mcb-hero-block .view-all{font-size:12px;margin-top:16px;padding-inline:16px}.mcb-hero-block .articles-header{font-size:16px;text-transform:uppercase}
-.mcb-hero-block .no-posts{background-color:var(--wp--preset--color--tertiary);color:var(--wp--preset--color--black);text-align:center;padding:40px 16px;width:100%}
-.mcb-hero-block .no-posts .heading{font-size:18px;line-height:1.2;margin:0}.mcb-articles{display:flex;flex-direction:column;width:calc(30% - 32px);padding:0 16px;min-height:400px;justify-content:space-between;height:550px}
+.mcb-no-posts{background-color:var(--wp--preset--color--tertiary);color:var(--wp--preset--color--black);text-align:center;padding:40px 16px;width:100%}
+.mcb-no-posts .heading{font-size:18px;line-height:1.2;margin:0}.mcb-articles{display:flex;flex-direction:column;width:calc(30% - 32px);padding:0 16px;min-height:400px;justify-content:space-between;height:550px}
 .mcb-articles .mcb-articles-loop{height:100%}.mcb-articles .mcb-article{display:flex;padding:16px}
 .mcb-articles .mcb-article:not(:last-child){border-bottom:1px solid var(--wp--preset--color--tertiary)}
 .mcb-articles .mcb-article .heading{font-size:16px;margin:0}.mcb-articles .mcb-article time{font-size:10px;text-transform:uppercase;color:var(--wp--preset--color--tertiary)}

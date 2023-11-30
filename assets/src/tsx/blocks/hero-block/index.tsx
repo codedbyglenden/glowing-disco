@@ -32,7 +32,7 @@ const site_url = blockData.url;
 registerBlockType( 'mcb/hero', {
 	title: 'mcb Hero Block',
 	icon: 'smiley',
-	category: 'common',
+	category: 'codedbyglenden',
 	supports: {
 		align: ['full']
 	},
@@ -64,7 +64,7 @@ registerBlockType( 'mcb/hero', {
 			type: 'object',
 			default: {
 				url: '',
-				text: 'View all',
+				text: '',
 			}
 		},
 		mediaUrl: {

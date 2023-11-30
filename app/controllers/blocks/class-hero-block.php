@@ -35,10 +35,23 @@ class WhiteHouse_Hero_Block {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 20, 2 );
 		add_action( 'rest_api_init', array( $this, 'rest_endpoint' ) );
 		add_filter( 'render_block', array( $this->service, 'render_block' ), 10, 2 );
-
 		add_action( 'after_setup_theme', array( $this, 'enqueue_frontend_assets' ) );
-
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts' ) );
+
+		add_filter( 'block_categories_all', array( $this, 'add_block_category' ));
+	}
+
+	/**
+	 * Adds my custom block category.
+	 */
+	public function add_block_category( $categories ): array {
+
+		$categories[] = array(
+			'slug'  => 'codedbyglenden',
+			'title' => 'CodedByGlenden Blocks',
+		);
+
+		return $categories;
 	}
 
 	/**

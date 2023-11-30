@@ -10,5 +10,7 @@ This WordPress plugin adds one... or a couple dependant on how much time I've go
 
 ## Usage
 
+All blocks are added to the `CodedByGlenden Blocks` category.
+
 See the video below of me adding and using the block.
 

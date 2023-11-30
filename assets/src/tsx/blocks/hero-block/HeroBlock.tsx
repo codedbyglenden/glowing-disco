@@ -5,7 +5,7 @@ const HeroBlock = ({articles, attributes, setAttributes}) => {
 
 	if ( articles.length < 1 ) {
 		return (
-			<div className="no-posts">
+			<div className="mcb-no-posts">
 				<h2 className="heading">Add posts to output data</h2>
 			</div>
 		)

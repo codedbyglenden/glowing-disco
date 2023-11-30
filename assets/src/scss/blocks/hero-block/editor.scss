@@ -52,19 +52,19 @@
 		font-size: 16px;
 		text-transform: uppercase;
 	}
+}
 
-	.no-posts {
-		background-color: var(--wp--preset--color--tertiary);
-		color: var(--wp--preset--color--black);
-		text-align: center;
-		padding: 40px 16px;
-		width: 100%;
+.mcb-no-posts {
+	background-color: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--black);
+	text-align: center;
+	padding: 40px 16px;
+	width: 100%;
 
-		.heading {
-			font-size: 18px;
-			line-height: 1.2;
-			margin: 0;
-		}
+	.heading {
+		font-size: 18px;
+		line-height: 1.2;
+		margin: 0;
 	}
 }
 
