@@ -5,118 +5,73 @@
  * @package mcb
  */
 
-// sb_dd( $attributes );
+$saved_posts = $attributes['savedPosts'] ?? array();
 
-$override_image = $attributes['mediaId'] > 0 ? '' : '';
+if ( empty( $saved_posts ) ) {
+	return;
+}
 
+$featured = $attributes['savedPosts'][0];
+
+$featured_image = $attributes['mediaId'] > 0 ? wp_get_attachment_image_src( $attributes['mediaId'], 'large' )[0] : $featured['thumbnail'];
 ?>
 
 <section class="mcb-hero-block alignfull">
-	<article class="featured">
+	<article class="mcb-hero-block--featured">
 		<div class="stickyImage">
-			<img
-				src="<?php echo esc_url( $attributes['savedPosts'][0]['thumbnail'] ); ?>"
-				alt=""
-			/>
+			<?php if ( ! empty( $featured_image ) ) : ?>
+				<img
+					src="<?php echo esc_url( $featured_image ); ?>"
+					alt="<?php echo esc_attr( $featured['title'] ); ?>"
+				/>
+			<?php endif; ?>
 		</div>
 		<header>
-			<h1>Statement from President Joe<span class="dewidow">&nbsp;</span>Biden on the Hostage Release in<span class="dewidow">&nbsp;</span>Gaza</h1>
+			<h1><?php esc_html_e( $featured['title'] ); ?></h1>
 		</header>
 	</article>
 
-	<aside class="aside">
-		<h2 class="aside-heading is-roboto is-uppercase" id="sidebar-heading">
-			<a href="#link" class="link">Sidebar heading</a>
-		</h2>
-		<div class="mcb-hero-block-list" role="group" aria-labelledby="sidebar-heading">
+	<aside class="mcb-hero-block--aside">
 
-			<!-- Require a list in a loop -->
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
+		<?php if ( $attributes['listHeadingLink']['url'] ) : ?>
+			<h2 class="aside-heading is-roboto is-uppercase" id="sidebar-heading">
+				<a href="<?php echo esc_url( $attributes['listHeadingLink']['url'] ); ?>" class="link"><?php esc_html_e( $attributes['listHeadingLink']['text'] ) ?></a>
+			</h2>
+		<?php endif; ?>
 
+		<div class="mcb-hero-block--list" role="group" aria-labelledby="sidebar-heading">
 
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
+			<?php
+				foreach ( $saved_posts as $key => $saved_post ) {
 
+					printf(
+						'<article class="faux-link--element">
+							<a href="%1$s" class="faux-link" title="visit article: %2$s"></a>
+							<time class="posted-on entry-date published updated" datetime="%3$s">%3$s</time>
+							<div class="title-container">
+								<h3 class="title">
+									%2$s
+								</h3>
+							</div>
+						</article>',
+						esc_url( get_the_permalink( $saved_post['id'] ) ),
+						esc_attr( $saved_post['title'] ),
+						esc_attr( $saved_post['date'] )
+					);
+				}
+			?>
 
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
-
-
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
-
-
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
-
-
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
-
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
-
-			<article class="faux-link--element">
-				<a href="#link-here" class="faux-link" title="visit article: The title of the post here."></a>
-				<time class="posted-on entry-date published updated" datetime="2023-11-17T21:24:57-05:00">November 17, 2023</time>
-				<div class="title-container">
-					<h3 class="title">
-						The title of the post here. sdfj f sjf jsd fjsd fjds fj dsf
-					</h3>
-				</div>
-			</article>
+		<?php
+			if ( $attributes['viewAllLink']['url'] ) :
+				printf(
+					'<div class="is-block">
+						<a class="view-all link is-inline-block" href="%1$s">%2$s</a>
+					</div>',
+					esc_url( $attributes['viewAllLink']['url'] ),
+					$attributes['viewAllLink']['text'] ? esc_html( $attributes['viewAllLink']['text'] ) : 'View All'
+				);
+			endif;
+		?>
 		</div>
-
-		<a class="view-all link" href="#view-all">View all</a>
 	</aside>
 </section>

@@ -1,0 +1,21 @@
+
+
+@media ( max-width: 990px ) {
+
+	.mcb-hero-block {
+		flex-direction: column;
+
+		&--featured {
+			max-width: initial;
+			position: relative;
+
+			.stickyImage {
+				position: relative;
+			}
+		}
+
+		&--aside {
+			padding-inline: 16px;
+		}
+	}
+}

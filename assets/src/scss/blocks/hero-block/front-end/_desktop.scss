@@ -1,10 +1,9 @@
-@import "../base/all";
-@import "../animations/all";
 
 .mcb-hero-block {
 	display: flex;
 
-	.featured {
+	&--featured {
+		width: 100%;
 		max-width: calc(100% - 320px);
 		position: relative;
 
@@ -20,8 +19,11 @@
 				inset: 0;
 				z-index: 10;
 				background-color: var(--wp--preset--color--tertiary);
-				animation: 1s forwards curtainPull ease;
 				will-change: transform;
+
+				@media (prefers-reduced-motion: no-preference) {
+					animation: 1s forwards curtainPull ease;
+				}
 			}
 		}
 
@@ -31,10 +33,15 @@
 			position: absolute;
 			max-height: calc( 100% - 4px );
 			animation: 1s forwards imageZoom ease;
+			will-change: transform;
+
+			@media (prefers-reduced-motion: no-preference) {
+				animation: 1s forwards imageZoom ease;
+			}
 		}
 
 		header {
-			top: 600px; // 500px;
+			top: 600px;
 			position: sticky;
 			background-color: var(--wp--preset--color--white);
 
@@ -51,29 +58,45 @@
 		}
 	}
 
-	.aside {
+	&--aside {
 		padding: 16px 40px;
+
+		.aside-heading {
+			font-size: 14px;
+			margin-bottom: 16px;
+			letter-spacing: 1px;
+			opacity: 1;
+			transform: translate(0);
+			will-change: transform, opacity;
+
+			@media (min-width: 990px) and (prefers-reduced-motion: no-preference) {
+				animation: 0.8s 0.8s backwards articleListSide ease;
+			}
+		}
 	}
 
-	.aside-heading {
-		font-size: 14px;
-		margin-bottom: 16px;
-		letter-spacing: 1px;
-		opacity: 0;
-		animation: 0.8s 0.8s forwards articleListSide ease;
-	}
-
-	&-list {
+	&--list {
 		min-width: 320px;
 		list-style: none;
 		display: flex;
 		flex-direction: column;
 
+		.view-all {
+			@media (min-width: 990px) and (prefers-reduced-motion: no-preference) {
+				animation: 0.8s 1s backwards articleListSide ease;
+			}
+		}
+
 		article {
 			padding-bottom: 16px;
 			margin-bottom: 16px;
-			opacity: 0;
-			animation: 0.8s 1s forwards articleListSide ease;
+			opacity: 1;
+			transform: translate(0);
+			will-change: transform, opacity;
+
+			@media (min-width: 990px) and (prefers-reduced-motion: no-preference) {
+				animation: 0.8s 1s backwards articleListSide ease;
+			}
 
 			@for $i from 1 through 10 {
 				&:nth-child(#{$i}) {
@@ -85,7 +108,8 @@
 			a:hover {
 
 				~ .title-container .title {
-					border-bottom-color: rgba(156,25,25,.8);
+					color:  var(--wp-preset-color-whitehouse-red) !important;
+					border-bottom-color: var(--wp-preset-color-whitehouse-red);
 				}
 			}
 
@@ -111,44 +135,6 @@
 			&:not(:last-child) {
 				border-bottom: 1px solid var(--wp--preset--color--tertiary);
 			}
-		}
-	}
-}
-
-.link {
-	font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: #000 !important;
-	border-bottom: 1px solid rgba(255,255,255,0);
-	transition: 0.2s ease-in-out border-bottom-color;
-	padding-bottom: 2px;
-
-	&:hover,
-	&:focus-visible {
-		border-bottom-color: rgba(156,25,25,.8);
-	}
-}
-
-
-.faux-link {
-	visibility: visible;
-	white-space: nowrap;
-	position: absolute;
-	text-indent: 200%;
-	overflow: hidden;
-	display: block;
-	opacity: 0;
-	z-index: 2;
-	inset: 0;
-
-	&--element {
-		position: relative;
-
-		a:not(.faux-link) {
-			position: relative;
-			z-index: 3;
 		}
 	}
 }

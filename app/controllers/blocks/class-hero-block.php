@@ -38,7 +38,7 @@ class WhiteHouse_Hero_Block {
 		add_action( 'after_setup_theme', array( $this, 'enqueue_frontend_assets' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts' ) );
 
-		add_filter( 'block_categories_all', array( $this, 'add_block_category' ));
+		add_filter( 'block_categories_all', array( $this, 'add_block_category' ) );
 	}
 
 	/**
@@ -65,14 +65,12 @@ class WhiteHouse_Hero_Block {
 	 * Enqueue
 	 */
 	public function enqueue_frontend_assets() {
-		// Get the theme version.
-		// $plugin_version = mcb_get_plugin_data();
 
 		\wp_enqueue_block_style(
 			'mcb/hero',
 			array(
 				'handle' => 'mcb-hero-front-end-css',
-				'src'    => MCB_BLOCKS_PLUGIN_URL . 'assets/dist/css/blocks/hero-block/front-end.min.css',
+				'src'    => MCB_BLOCKS_PLUGIN_URL . 'assets/dist/css/blocks/hero-block/front-end/index.min.css',
 				'ver'    => '1.0.0',
 			)
 		);
@@ -91,7 +89,7 @@ class WhiteHouse_Hero_Block {
 			'mcb/hero',
 			array(
 				'handle' => 'mcb-hero-css',
-				'src'    => MCB_BLOCKS_PLUGIN_URL . 'assets/dist/css/blocks/hero-block/editor.min.css',
+				'src'    => MCB_BLOCKS_PLUGIN_URL . 'assets/dist/css/blocks/hero-block/editor/index.min.css',
 				'ver'    => $plugin_version,
 			)
 		);

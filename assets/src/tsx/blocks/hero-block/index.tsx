@@ -30,7 +30,7 @@ const {
 const site_url = blockData.url;
 
 registerBlockType( 'mcb/hero', {
-	title: 'mcb Hero Block',
+	title: 'MCB Hero Block',
 	icon: 'smiley',
 	category: 'codedbyglenden',
 	supports: {
@@ -238,18 +238,6 @@ registerBlockType( 'mcb/hero', {
 								</tbody>
 							</table>
 						</>}
-					</PanelBody>
-
-					<PanelBody title={ __( 'Display' ) } initialOpen={ false } >
-						<SelectControl
-							label="Layout Type"
-							value={ displayType }
-							options={ [
-								{ label: 'Main stage', value: 'main' },
-								{ label: 'List', value: 'list' },
-							] }
-							onChange={ ( type ) => setAttributes({displayType: type}) }
-						/>
 					</PanelBody>
 				</InspectorControls>
 
