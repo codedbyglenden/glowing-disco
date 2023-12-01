@@ -217,7 +217,7 @@ registerBlockType( 'mcb/hero', {
 						/>
 
 						{foundPosts.length > 0 &&
-						<>
+						<div className="mcb-wrap-search">
 							<table className="wp-list-table widefat fixed striped table-view-list">
 								<tbody>
 									{ foundPosts?.map( ( post ) => (
@@ -237,7 +237,7 @@ registerBlockType( 'mcb/hero', {
 									) ) }
 								</tbody>
 							</table>
-						</>}
+						</div>}
 					</PanelBody>
 				</InspectorControls>
 

@@ -34,6 +34,7 @@
 			max-height: calc( 100% - 4px );
 			animation: 1s forwards imageZoom ease;
 			will-change: transform;
+			object-fit: cover;
 
 			@media (prefers-reduced-motion: no-preference) {
 				animation: 1s forwards imageZoom ease;
@@ -76,7 +77,7 @@
 	}
 
 	&--list {
-		min-width: 320px;
+		width: 320px;
 		list-style: none;
 		display: flex;
 		flex-direction: column;

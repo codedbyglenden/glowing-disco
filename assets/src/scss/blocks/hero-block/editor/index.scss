@@ -68,6 +68,11 @@
 	}
 }
 
+.mcb-wrap-search {
+	max-height: 300px;
+	overflow: auto;
+}
+
 .mcb-articles {
 	display: flex;
     flex-direction: column;
@@ -79,6 +84,7 @@
 
 	.mcb-articles-loop {
 		height: 100%;
+		overflow: auto;
 	}
 
 	.mcb-article {
